@@ -42,20 +42,6 @@ The analysis focuses on the following operational questions:
 - Power BI
 - Basic data analysis techniques
 
-## Project Structure
-supply-chain-delivery-analysis
-│
-├── data
-│ └── supply_chain_dataset.csv
-│
-├── analysis
-│ └── delivery_analysis.xlsx
-│
-├── dashboard
-│ └── delivery_performance_dashboard.pbix
-│
-└── README.md
-
 
 ## Expected Outcome
 
