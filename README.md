@@ -43,3 +43,20 @@ The analysis focuses on the following operational questions:
 - Basic data analysis techniques
 
 ## Project Structure
+supply-chain-delivery-analysis
+│
+├── data
+│ └── supply_chain_dataset.csv
+│
+├── analysis
+│ └── delivery_analysis.xlsx
+│
+├── dashboard
+│ └── delivery_performance_dashboard.pbix
+│
+└── README.md
+
+
+## Expected Outcome
+
+The purpose of this project is to explore delivery performance patterns and highlight operational insights that could help supply chain teams improve service reliability and operational coordination.
