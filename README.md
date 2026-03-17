@@ -1,48 +1,46 @@
-# Supply Chain Delivery Performance Analysis
+Supply Chain Delivery Performance & Risk Analysis
+📈 Executive Summary
+In global logistics, delivery performance is the primary driver of customer retention and cost control. This project provides a diagnostic analysis of 1,200 shipment records to identify operational bottlenecks and quantify the financial impact of delivery failures.
 
-## Business Context
+The Outcome: A strategic dashboard that moves beyond simple reporting to provide prescriptive insights into regional performance gaps and carrier reliability, identifying over $1.8M in revenue currently at risk.
 
-In supply chain operations, delivery performance is an important indicator of operational efficiency and service reliability. Delays in shipments can impact customer satisfaction, operational planning, and logistics costs.
+🎯 Project Objectives
+Quantify Performance: Identify regional variance against the 85% On-Time Delivery (OTD) target.
 
-Operations teams often monitor delivery performance data to identify bottlenecks and understand where improvements may be needed.
+Identify Root Causes: Isolate the primary drivers of delays (e.g., Weather vs. Inventory Holds).
 
-## Objective
+Financial Risk Assessment: Calculate the Order Value at Risk to prioritize operational interventions.
 
-The goal of this project is to analyze delivery performance data to better understand where shipment delays occur and identify potential areas for operational improvement.
+Carrier Benchmarking: Compare Actual vs. Planned transit times across major carriers (FedEx, Canada Post, etc.).
 
-## Dataset
+🛠️ Technical Implementation
+Data Modeling: Implemented a Star Schema to separate shipment facts from dimension tables (Calendar, Geography, Carriers), ensuring model scalability and performance.
 
-This project uses a simulated supply chain dataset containing shipment-level information such as:
+Power BI UI/UX: Built an executive-grade interface utilizing a 60%–80% truncated axis to highlight regional performance gaps and Gauge visuals for real-time KPI tracking.
 
-- shipment date
-- delivery date
-- region
-- warehouse location
-- transport mode
-- carrier
-- delay days
-- delay reason
-- freight cost
-- order value
+Advanced DAX: Developed complex measures for On-Time Rate %, Month-over-Month (MoM) Trend, and Revenue at Risk calculations.
 
-The dataset represents typical information that operations or supply chain teams may monitor when tracking delivery performance.
+Data Transformation: Performed ETL in Power Query to normalize date formats and handle null values in delay categorization.
 
-## Key Questions
+💡 Key Operational Insights
+The Regional Gap: While the overall delay rate is 20.25%, Western provinces (BC/Manitoba) show significantly higher volatility, consistently failing to meet OTD targets due to geographic transit constraints.
 
-The analysis focuses on the following operational questions:
+High-Value Exposure: Late deliveries currently impact $1.8M in total order value, highlighting a critical need for localized buffer-stocking strategies.
 
-1. Which regions have the highest delivery delay rates?
-2. Are delays increasing or decreasing over time?
-3. What are the most common reasons for shipment delays?
-4. Are certain carriers or transport modes associated with higher delays?
+Carrier Efficiency: Analysis revealed that Canada Post averages 0.4 days more in transit than FedEx, contributing to SLA breaches in 15% of Ground-mode shipments.
 
-## Tools Used
+🚀 Strategic Recommendations
+Carrier Optimization: Shift high-priority Western region shipments to FedEx to mitigate the 0.4-day transit lag.
 
-- Excel
-- Power BI
-- Basic data analysis techniques
+Inventory Buffering: Increase safety stock levels in Vancouver and Calgary during peak weather months to offset the 21.4% delay rate attributed to environmental factors.
 
+Warehouse Process Review: With Inventory Holds (25.1%) being the leading delay reason, a lean audit of warehouse release protocols is recommended to reduce internal dwell time.
 
-## Expected Outcome
+📊 Data Dictionary
+The analysis is based on the supply_chain_dataset_pandora.csv which includes:
 
-The purpose of this project is to explore delivery performance patterns and highlight operational insights that could help supply chain teams improve service reliability and operational coordination.
+Planned vs. Actual Transit Days: Used to calculate carrier efficiency.
+
+On_Time_Flag: Binary indicator used as the primary performance KPI.
+
+Order_Value_CAD: Financial metric used to weigh the severity of operational delays.
